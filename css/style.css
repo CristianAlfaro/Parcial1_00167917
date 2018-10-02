@@ -52,6 +52,12 @@ html{
     object-fit: contain;
 }
 
+header{
+    background-image: url(./img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .cabezeraMain{
     display: flex;
     width: 100%;
@@ -59,9 +65,6 @@ html{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(img/fondo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: #000000;
 
 }
@@ -118,8 +121,9 @@ html{
 }
 
 .articulo p{
-    font-size: 0.9em;
+    font-size: 0.8em;
     padding-bottom: 1em;
+    text-align: justify;
 }
 
 .boton{
@@ -138,11 +142,36 @@ html{
 }
 
 .boton.type1:hover{
-    width: 100%;
-    border-radius: 0.5em;
-    padding: 1em;
-    border: none;
-    background-color: #ffa500;
-    color: #ffffff;
+    transition: all 0.7s;
+    background-color: #ffffff;
+    color: #ffa500;
+
 }
 
+
+@media only screen and (max-width: 600px){
+
+    .articulo{
+        grid-column-start: auto;
+        grid-column-end: span 3;
+    }
+    .articulo{
+        padding-bottom: 3em;
+        padding-top: 3em;
+        align-items: center;
+    }
+
+    .links .logo{
+        visibility: hidden;
+    }
+
+    .titulo{
+        font-size: 2em;
+    }
+    .navbar .links{
+        flex-direction: column;
+        padding-top: 1em;
+        height: auto;
+    }
+
+}
