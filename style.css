@@ -20,6 +20,18 @@ html{
     height: 3.5em;
 }
 
+.cabezeraMain i{
+    margin-top: 1em;
+    color: #ffffff;
+    font-size: 2em;
+
+}
+
+.cabezeraMain i:hover, .cabezeraMain i:active{
+    color: #0000ff;
+    transition: all 1s;
+}
+
 .navbar .links{
     display: flex;
     justify-content: space-around;
@@ -33,13 +45,18 @@ html{
 .links li a{
     color: #ffffff;
     text-decoration: none;
+    transition: all 0.5s;
+}
+
+.links li a:hover{
+    text-decoration: #ffffff underline;
 }
 
 .links .logo{
     height: 6em;
     width: 6em;
-    background: #000000;
     position: absolute;
+    background-color: #000000;
     top: 0.25em;
     padding: 0.5em;
     -webkit-clip-path: polygon(50% 0%,100% 50%,50% 100%,0% 50%);
@@ -53,9 +70,10 @@ html{
 }
 
 header{
-    background-image: url(./img/fondo.jpg);
+    background-image: url(img/fondo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .cabezeraMain{
@@ -65,7 +83,7 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #000000;
+    background-color: #00000000;
 
 }
 
@@ -141,20 +159,76 @@ header{
     color: #ffffff;
 }
 
-.boton.type1:hover{
+.boton.type1:hover, .boton.type1:active{
     transition: all 0.7s;
     background-color: #ffffff;
     color: #ffa500;
 
 }
 
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: auto;
+}
 
-@media only screen and (max-width: 600px){
+.flex.contacto{
+    background-color: #0000006e;
+    border-radius: 3em;
+
+}
+
+.flex .form{
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+.flex label{
+    color: #ffffff;
+    line-height: 2em;
+}
+
+.flex.contacto h6{
+    color: #ffffff;
+    font-size: 1.3em;
+    padding-top: 2em;
+}
+
+.flex.contacto p{
+    color: #ffffff;
+    font-size: 0.9em;
+    padding: 1em 3em 0;
+    text-align: justify;
+}
+
+.containerGrid.type2{
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 50%;
+    margin: auto;
+    padding: 0%;
+    text-align: -webkit-center;
+    padding-top: 1em;
+    padding-bottom: 2em; 
+    background-image: url(img/contacus.jpg);  
+    background-position: center;
+    background-size: cover; 
+}
+
+@media only screen and (max-width: 900px){
 
     .articulo{
         grid-column-start: auto;
         grid-column-end: span 3;
     }
+
+    .flex{
+        grid-column-start: auto;
+        grid-column-end: span 2;
+        margin-top: 0.7em;
+    }
+
     .articulo{
         padding-bottom: 3em;
         padding-top: 3em;
@@ -172,6 +246,13 @@ header{
         flex-direction: column;
         padding-top: 1em;
         height: auto;
+    }
+
+    .flex.contacto p{
+    color: #ffffff;
+    font-size: 0.9em;
+    padding: 1em 4em 2em;
+    text-align: justify;
     }
 
 }
