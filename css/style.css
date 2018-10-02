@@ -77,3 +77,72 @@ html{
     color: #ffffff;
     font-size: 1em;
 }
+
+.containerGrid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-auto-rows: 50%;    
+    justify-content: center;
+}
+
+.articulo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 1em;
+    margin: 0.2em;
+    padding: 0.5em;
+    box-shadow: 4px 4px 13px -2px rgb(95, 93, 93);
+}
+
+.marcofoto{
+    width: 100%;
+    height: 30%;
+    background-color: #000000;
+}
+
+.marcofoto .imgArticulo{
+    width: 100%;  
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+.articulo h3{
+    padding-bottom: 1em;
+    color: #612e1d;
+    font-size: 1.5em;
+}
+
+.articulo p{
+    font-size: 0.9em;
+    padding-bottom: 1em;
+}
+
+.boton{
+    background-color: transparent;
+    border: 0.5px solid #000000;
+    padding: 0.3em;
+}
+
+.boton.type1{
+    width: 100%;
+    border-radius: 0.5em;
+    padding: 1em;
+    border: none;
+    background-color: #ffa500;
+    color: #ffffff;
+}
+
+.boton.type1:hover{
+    width: 100%;
+    border-radius: 0.5em;
+    padding: 1em;
+    border: none;
+    background-color: #ffa500;
+    color: #ffffff;
+}
+
